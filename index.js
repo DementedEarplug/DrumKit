@@ -39,6 +39,44 @@ function snare()
     console.log("I got clickeck")
     let snare =  new Audio("./sounds/snare.mp3")
     snare.play()
-    event.target.classList.toggle("pressed")
+    console.log()
 }
 
+// Eevent listeners for keyboard presses
+document.addEventListener("keypress", function(event){
+    let key = event.key
+
+    switch (key) {
+        case "w":
+            tom1()
+            break;
+    
+        case "a":
+            tom2()
+            break;
+    
+        case "s":
+            pedal()
+            break;
+    
+        case "d":
+            snare()
+            break;
+    
+        case "j":
+            tom3()
+            break;
+    
+        case "k":
+            tom4()
+            break;
+    
+        case "l":
+            crash()
+            break;
+    
+        default:
+            console.log(key)
+            break;
+    }
+})
